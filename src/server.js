@@ -7,7 +7,7 @@ require('./models')
 
 const main = async () => {
     try {
-        sequelize.sync();
+        sequelize.sync({force:true});
         console.log("DB connected");
         app.listen(PORT);
         console.log(`Server running on port ${PORT}`);
